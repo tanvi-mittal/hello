@@ -48,54 +48,69 @@ __________________________________________
 ### Run Locally 
 Follow these steps to run the project on your local machine:
 
-- Clone the repository from github
+#### 1. Clone the repository from github
 ```bash
 git clone https://github.com/EqualExperts-Assignments/equal-experts-fierce-ambitious-alert-animal-a6a2d020bb69.git
 cd equal-experts-fierce-ambitious-alert-animal-a6a2d020bb69
 ```
 
-- (Optional) Create and activate a virtual environment
+#### 2.(Optional) Create and activate a virtual environment
 ```bash
-python -m venv venv #or
-python3 -m venv venv 
-source venv/bin/activate  # (on Linux and Mac)
-# On Windows: venv\Scripts\activate
+# Use either of the following depending on your system
+python -m venv venv
+# or
+python3 -m venv venv
+
+# Activate the environment
+source venv/bin/activate        # Linux/macOS
+venv\Scripts\activate           # Windows
 ```
 
-- Install dependencies
+#### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-- Run the Flask app
+#### 4. Run the Flask app
 ```bash
 python app.py
+```
+Visit the API at: http://localhost:8080/octocat
+
+You can replace octocat with any GitHub username:
+```bash
+http://localhost:8080/<username>
 ```
 
 ### Run using Docker
 
-- Build the docker image
+#### 1.Build the docker image
 ```bash
 docker build -t github-gist-api .
 ```
-- Run the container
+#### 2. Run the container
 ```bash
 docker run -p 8080:8080 github-gist-api
 ```
-- Test the API
+#### 3. Test the API
 ```bash
 curl http://localhost:8080/octocat
 ```
-- Go to the Browser and hit http://localhost:8080/octocat / http://localhost:8080/octocat- or any other usernames you want to test
 
-- Run Tests
+Or open in your browser:
+```bash
+http://localhost:8080/octocat
+http://localhost:8080/<username>
+```
+
+#### Run Tests
 ```bash
 pytest test_cases.py
 ```
 
 ### Project Structure
 ```bash
-github-gist-api/
+equal-experts-fierce-ambitious-alert-animal-a6a2d020bb69/
 ├── app.py              # Flask app
 ├── test_cases.py       # Pytest test suite
 ├── requirements.txt    # Python dependencies
