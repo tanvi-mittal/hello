@@ -43,20 +43,21 @@ __________________________________________
 [^2]: https://docs.github.com/en/rest/gists/gists?apiVersion=2022-11-28
 
 
-### Instructions to run the code
+## Instructions to run the API
 
-## Run Locally 
+### Run Locally 
 Follow these steps to run the project on your local machine:
 
-- Clone the repository
+- Clone the repository from github
 ```bash
-git clone https://github.com/your-username/github-gist-api.git
-cd github-gist-api
+git clone https://github.com/EqualExperts-Assignments/equal-experts-fierce-ambitious-alert-animal-a6a2d020bb69.git
+cd equal-experts-fierce-ambitious-alert-animal-a6a2d020bb69
 ```
 
 - (Optional) Create and activate a virtual environment
 ```bash
-python -m venv venv
+python -m venv venv #or
+python3 -m venv venv 
 source venv/bin/activate  # (on Linux and Mac)
 # On Windows: venv\Scripts\activate
 ```
@@ -85,16 +86,19 @@ docker run -p 8080:8080 github-gist-api
 ```bash
 curl http://localhost:8080/octocat
 ```
-# Go to the Browser
-🧪 Run Tests
-bash
-pytest test_cases.py
+- Go to the Browser and hit http://localhost:8080/octocat / http://localhost:8080/octocat- or any other usernames you want to test
 
-Project Structure
-Code
+- Run Tests
+```bash
+pytest test_cases.py
+```
+
+### Project Structure
+```bash
 github-gist-api/
 ├── app.py              # Flask app
 ├── test_cases.py       # Pytest test suite
 ├── requirements.txt    # Python dependencies
 ├── Dockerfile          # Docker container setup
 └── README.md           # Project documentation
+```
